@@ -6,7 +6,6 @@ from .models import Post, Group
 def index(request):
     template = 'posts/index.html'
     posts = Post.objects.all()[:10]
-    context = {'posts': posts}
     return render(request, template, {
         'posts': posts,
     })
